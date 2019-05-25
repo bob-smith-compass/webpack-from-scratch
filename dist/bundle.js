@@ -65,25 +65,24 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__bar__ = __webpack_require__(1);
+// import bar from './bar';
 
-
-Object(__WEBPACK_IMPORTED_MODULE_0__bar__["a" /* default */])();
+// bar();
 
 
-/***/ }),
-/* 1 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = bar;
-function bar() {
-    console.log('Exported Module!');
-}
+function component() {
+    const element = document.createElement('div');
+  
+    // Lodash, currently included via a script, is required for this line to work
+    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+  
+    return element;
+  }
+  
+  document.body.appendChild(component());
+  
 
 /***/ })
 /******/ ]);
